@@ -1,10 +1,13 @@
 package com.bleizing.sejuta_kebaikan_be.model;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.EntityListeners;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -18,6 +21,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
 public class BaseModel implements Serializable {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	@Column
+	private Boolean active;
+	
 	@Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_at", nullable = false, updatable = false)
     @CreatedDate
@@ -27,8 +37,24 @@ public class BaseModel implements Serializable {
     @Column(name = "updated_at", nullable = false)
     @LastModifiedDate
     private Date updatedAt;
+    
+    public Long getId() {
+		return id;
+	}
 
-    public Date getCreatedAt() {
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Boolean getActive() {
+		return active;
+	}
+
+	public void setActive(Boolean active) {
+		this.active = active;
+	}
+
+	public Date getCreatedAt() {
         return createdAt;
     }
 
