@@ -28,6 +28,9 @@ public class User extends BaseModel {
 	@NotNull
 	@Column
 	private String password;
+	
+	@Column
+	private String address;
 
 	public String getName() {
 		return name;
@@ -59,6 +62,14 @@ public class User extends BaseModel {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 	
 }
