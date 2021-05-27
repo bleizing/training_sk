@@ -22,7 +22,7 @@ public class User extends BaseModel {
 	private String email;
 	
 	@NotNull
-	@Column(unique = true)
+	@Column(length = 16, unique = true)
 	private String phoneNumber;
 	
 	@NotNull

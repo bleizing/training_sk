@@ -7,5 +7,5 @@ import com.bleizing.sejuta_kebaikan_be.model.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
-
+	
 }

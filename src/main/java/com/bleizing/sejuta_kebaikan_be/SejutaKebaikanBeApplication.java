@@ -30,14 +30,23 @@ public class SejutaKebaikanBeApplication {
     } 
 	
 	private void setup(UserRepository userRepository) {
-		User user = new User();
-		user.setActive(true);
-		user.setName("Admin");
-		user.setPhoneNumber("08123456789");
-		user.setEmail("admin@test.com");
-		user.setPassword("admin");
-		user.setAddress("Jakarta");
-		
-		userRepository.save(user);
+		User user = null;
+		try {
+			user = userRepository.findById(1L).get();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (user == null) {
+				user = new User();
+				user.setActive(true);
+				user.setName("Admin");
+				user.setPhoneNumber("081234567890");
+				user.setEmail("admin@test.com");
+				user.setPassword("admin");
+				user.setAddress("Jakarta");
+				
+				userRepository.save(user);
+			}
+		}
 	}
 }
