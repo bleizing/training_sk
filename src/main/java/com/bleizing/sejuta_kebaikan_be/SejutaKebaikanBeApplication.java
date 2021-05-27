@@ -20,9 +20,13 @@ import com.bleizing.sejuta_kebaikan_be.repository.CampaignCategoryRepository;
 import com.bleizing.sejuta_kebaikan_be.repository.CampaignRepository;
 import com.bleizing.sejuta_kebaikan_be.repository.UserRepository;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @SpringBootApplication
 @EnableJpaAuditing
 public class SejutaKebaikanBeApplication {
+	private static final Logger logger = LoggerFactory.getLogger(SejutaKebaikanBeApplication.class);
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SejutaKebaikanBeApplication.class, args);
@@ -36,10 +40,12 @@ public class SejutaKebaikanBeApplication {
 	
 	private void initData(CampaignCategoryRepository campaignCategoryRepository, UserRepository userRepository, CampaignRepository campaignRepository) {
 		if (!isDataLoaded(userRepository)) {
+			logger.info("Init Data");
 			CampaignCategory campaignCategory = initCampaignCategory(campaignCategoryRepository);
 			User user = initUser(userRepository);
 			initCampaign(campaignRepository, campaignCategory, user);
 		}
+		logger.info("Data Available");
 	}
 	
 	private boolean isDataLoaded(UserRepository userRepository) {
@@ -61,6 +67,8 @@ public class SejutaKebaikanBeApplication {
 		
 		campaignCategoryRepository.save(campaignCategory);
 		
+		logger.info("Init Campaign Cateogry Success");
+		
 		return campaignCategory;
 	}
 	
@@ -75,6 +83,8 @@ public class SejutaKebaikanBeApplication {
 		user.setChannel(1);
 		
 		userRepository.save(user);
+
+		logger.info("Init User Success");
 		
 		return user;
 	}
@@ -109,5 +119,7 @@ public class SejutaKebaikanBeApplication {
         campaign.setUser(user);
         
         campaignRepository.save(campaign);
+        
+		logger.info("Init Campaign Success");
 	}
 }
