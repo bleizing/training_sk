@@ -1,0 +1,56 @@
+2021-05-27 22:29:05,441 INFO org.springframework.boot.StartupInfoLogger [main] Starting SejutaKebaikanBeApplication using Java 14.0.2 on Bleizings-MacBook-Pro.local with PID 6106 (/Users/bleizing/Bleizing/Kerja/Training/Sejuta Kebaikan/Sejuta Kebaikan BE/sejuta_kebaikan_be/target/classes started by bleizing in /Users/bleizing/Bleizing/Kerja/Training/Sejuta Kebaikan/Sejuta Kebaikan BE/sejuta_kebaikan_be)
+2021-05-27 22:29:05,443 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.0, Spring v5.3.7
+2021-05-27 22:29:05,443 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-05-27 22:29:06,164 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-27 22:29:06,233 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+2021-05-27 22:29:06,754 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8181 (http)
+2021-05-27 22:29:06,763 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8181"]
+2021-05-27 22:29:06,764 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-05-27 22:29:06,764 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-05-27 22:29:06,851 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-05-27 22:29:06,854 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1362 ms
+2021-05-27 22:29:07,039 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-27 22:29:07,086 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.31.Final
+2021-05-27 22:29:07,221 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-27 22:29:07,324 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-05-27 22:29:07,525 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-05-27 22:29:07,539 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-05-27 22:29:08,395 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-27 22:29:08,401 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-27 22:29:08,794 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-27 22:29:09,089 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8181"]
+2021-05-27 22:29:09,109 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8181 (http) with context path ''
+2021-05-27 22:29:09,120 INFO org.springframework.boot.StartupInfoLogger [main] Started SejutaKebaikanBeApplication in 9.121 seconds (JVM running for 9.46)
+2021-05-27 22:29:09,121 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state LivenessState changed to CORRECT
+2021-05-27 22:29:09,163 INFO com.bleizing.sejuta_kebaikan_be.SejutaKebaikanBeApplication [main] Data Available
+2021-05-27 22:29:09,165 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2021-05-27 22:29:49,274 INFO org.springframework.boot.StartupInfoLogger [main] Starting SejutaKebaikanBeApplication using Java 14.0.2 on Bleizings-MacBook-Pro.local with PID 6129 (/Users/bleizing/Bleizing/Kerja/Training/Sejuta Kebaikan/Sejuta Kebaikan BE/sejuta_kebaikan_be/target/classes started by bleizing in /Users/bleizing/Bleizing/Kerja/Training/Sejuta Kebaikan/Sejuta Kebaikan BE/sejuta_kebaikan_be)
+2021-05-27 22:29:49,277 DEBUG org.springframework.boot.StartupInfoLogger [main] Running with Spring Boot v2.5.0, Spring v5.3.7
+2021-05-27 22:29:49,277 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2021-05-27 22:29:49,941 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-05-27 22:29:50,009 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2021-05-27 22:29:50,538 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8181 (http)
+2021-05-27 22:29:50,548 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8181"]
+2021-05-27 22:29:50,549 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2021-05-27 22:29:50,549 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2021-05-27 22:29:50,636 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2021-05-27 22:29:50,637 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1306 ms
+2021-05-27 22:29:50,803 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-05-27 22:29:50,845 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.4.31.Final
+2021-05-27 22:29:50,955 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-05-27 22:29:51,043 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2021-05-27 22:29:51,244 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-05-27 22:29:51,258 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-05-27 22:29:52,052 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-05-27 22:29:52,058 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-05-27 22:29:52,404 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-05-27 22:29:52,694 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8181"]
+2021-05-27 22:29:52,716 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8181 (http) with context path ''
+2021-05-27 22:29:52,725 INFO org.springframework.boot.StartupInfoLogger [main] Started SejutaKebaikanBeApplication in 8.893 seconds (JVM running for 9.349)
+2021-05-27 22:29:52,726 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state LivenessState changed to CORRECT
+2021-05-27 22:29:52,758 INFO com.bleizing.sejuta_kebaikan_be.SejutaKebaikanBeApplication [main] Init Data
+2021-05-27 22:29:52,824 INFO com.bleizing.sejuta_kebaikan_be.SejutaKebaikanBeApplication [main] Init Campaign Cateogry Success
+2021-05-27 22:29:52,841 INFO com.bleizing.sejuta_kebaikan_be.SejutaKebaikanBeApplication [main] Init User Success
+2021-05-27 22:29:52,859 INFO com.bleizing.sejuta_kebaikan_be.SejutaKebaikanBeApplication [main] Init Campaign Success
+2021-05-27 22:29:52,859 INFO com.bleizing.sejuta_kebaikan_be.SejutaKebaikanBeApplication [main] Data Available
+2021-05-27 22:29:52,860 INFO org.springframework.boot.availability.ApplicationAvailabilityBean [main] Application availability state ReadinessState changed to ACCEPTING_TRAFFIC

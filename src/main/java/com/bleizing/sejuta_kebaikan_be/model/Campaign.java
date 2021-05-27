@@ -1,5 +1,6 @@
 package com.bleizing.sejuta_kebaikan_be.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -24,7 +25,7 @@ public class Campaign extends BaseModel {
 	
 	@NotNull
 	@Column
-	private Integer targetAmount;
+	private BigDecimal targetAmount;
 	
 	@NotNull
 	@Column
@@ -39,8 +40,12 @@ public class Campaign extends BaseModel {
 	private String bannerImage;
 	
 	@NotNull
-	@Column(length = 20)
-	private String type;
+	@Column
+	private Integer totalShare = 0;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "campaign_category_id")
+	private CampaignCategory campaignCategory;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "user_id")
@@ -66,11 +71,11 @@ public class Campaign extends BaseModel {
 		this.description = description;
 	}
 
-	public Integer getTargetAmount() {
+	public BigDecimal getTargetAmount() {
 		return targetAmount;
 	}
 
-	public void setTargetAmount(Integer targetAmount) {
+	public void setTargetAmount(BigDecimal targetAmount) {
 		this.targetAmount = targetAmount;
 	}
 
@@ -98,12 +103,20 @@ public class Campaign extends BaseModel {
 		this.bannerImage = bannerImage;
 	}
 
-	public String getType() {
-		return type;
+	public Integer getTotalShare() {
+		return totalShare;
 	}
 
-	public void setType(String type) {
-		this.type = type;
+	public void setTotalShare(Integer totalShare) {
+		this.totalShare = totalShare;
+	}
+
+	public CampaignCategory getCampaignCategory() {
+		return campaignCategory;
+	}
+
+	public void setCampaignCategory(CampaignCategory campaignCategory) {
+		this.campaignCategory = campaignCategory;
 	}
 
 	public User getUser() {

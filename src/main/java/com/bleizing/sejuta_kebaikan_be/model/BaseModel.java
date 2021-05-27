@@ -26,7 +26,7 @@ public class BaseModel implements Serializable {
 	private Long id;
 	
 	@Column
-	private Boolean active;
+	private Boolean active = false;
 	
 	@Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_at", nullable = false, updatable = false)
