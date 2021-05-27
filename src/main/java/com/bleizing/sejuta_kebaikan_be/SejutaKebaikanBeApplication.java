@@ -60,6 +60,7 @@ public class SejutaKebaikanBeApplication {
 		user.setEmail("admin@test.com");
 		user.setPassword("admin");
 		user.setAddress("Jakarta");
+		user.setChannel(1);
 		
 		userRepository.save(user);
 		

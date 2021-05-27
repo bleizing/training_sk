@@ -21,16 +21,19 @@ public class User extends BaseModel {
 	@Column(unique = true)
 	private String email;
 	
-	@NotNull
 	@Column(length = 16, unique = true)
 	private String phoneNumber;
 	
-	@NotNull
 	@Column
 	private String password;
 	
 	@Column
 	private String address;
+	
+	// 1. Manual Register, 2. GSignIn, 3. Facebook, 4. Intagram
+	@NotNull
+	@Column(length = 1)
+	private Integer channel;
 
 	public String getName() {
 		return name;
@@ -70,6 +73,14 @@ public class User extends BaseModel {
 
 	public void setAddress(String address) {
 		this.address = address;
+	}
+
+	public Integer getChannel() {
+		return channel;
+	}
+
+	public void setChannel(Integer channel) {
+		this.channel = channel;
 	}
 	
 }

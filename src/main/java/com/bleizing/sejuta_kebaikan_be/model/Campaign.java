@@ -39,6 +39,10 @@ public class Campaign extends BaseModel {
 	@Column
 	private String bannerImage;
 	
+	@NotNull
+	@Column
+	private Integer totalShare = 0;
+	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "campaign_category_id")
 	private CampaignCategory campaignCategory;
@@ -97,6 +101,14 @@ public class Campaign extends BaseModel {
 
 	public void setBannerImage(String bannerImage) {
 		this.bannerImage = bannerImage;
+	}
+
+	public Integer getTotalShare() {
+		return totalShare;
+	}
+
+	public void setTotalShare(Integer totalShare) {
+		this.totalShare = totalShare;
 	}
 
 	public CampaignCategory getCampaignCategory() {
