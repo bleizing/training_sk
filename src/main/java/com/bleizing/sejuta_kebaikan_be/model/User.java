@@ -14,10 +14,20 @@ import com.sun.istack.NotNull;
 @Table(name = "users")
 public class User extends BaseModel {
 	@NotNull
+	@Column
 	private String name;
 	
-	@Column
+	@NotNull
+	@Column(unique = true)
 	private String email;
+	
+	@NotNull
+	@Column(unique = true)
+	private String phoneNumber;
+	
+	@NotNull
+	@Column
+	private String password;
 
 	public String getName() {
 		return name;
@@ -34,4 +44,21 @@ public class User extends BaseModel {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
 }
