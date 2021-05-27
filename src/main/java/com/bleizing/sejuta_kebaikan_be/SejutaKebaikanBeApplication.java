@@ -35,9 +35,21 @@ public class SejutaKebaikanBeApplication {
     } 
 	
 	private void initData(CampaignCategoryRepository campaignCategoryRepository, UserRepository userRepository, CampaignRepository campaignRepository) {
-		CampaignCategory campaignCategory = initCampaignCategory(campaignCategoryRepository);
-		User user = initUser(userRepository);
-		initCampaign(campaignRepository, campaignCategory, user);
+		if (!isDataLoaded(userRepository)) {
+			CampaignCategory campaignCategory = initCampaignCategory(campaignCategoryRepository);
+			User user = initUser(userRepository);
+			initCampaign(campaignRepository, campaignCategory, user);
+		}
+	}
+	
+	private boolean isDataLoaded(UserRepository userRepository) {
+		boolean isDataLoaded = false;
+		
+		if (userRepository.findById(1L).isPresent()) {
+			isDataLoaded = true;
+		}
+		
+		return isDataLoaded;
 	}
 	
 	private CampaignCategory initCampaignCategory(CampaignCategoryRepository campaignCategoryRepository) {

@@ -34,6 +34,9 @@ public class User extends BaseModel {
 	@NotNull
 	@Column(length = 1)
 	private Integer channel;
+	
+	@Column
+	private String deviceId;
 
 	public String getName() {
 		return name;
@@ -81,6 +84,14 @@ public class User extends BaseModel {
 
 	public void setChannel(Integer channel) {
 		this.channel = channel;
+	}
+
+	public String getDeviceId() {
+		return deviceId;
+	}
+
+	public void setDeviceId(String deviceId) {
+		this.deviceId = deviceId;
 	}
 	
 }
